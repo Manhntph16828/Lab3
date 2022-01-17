@@ -56,7 +56,7 @@ const HomePage = {
             </section>
             <footer>
             <div class="mt-4 bg-blue-900 h-14">
-                <h2 class="text-center py-4 text-white">NGÔ THỊ ÁNH LÂM</h2>
+                <h2 class="text-center py-4 text-white">Nguyễn Tiến Mạnh</h2>
             </div>
             </footer>
         </div>
