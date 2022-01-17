@@ -1,34 +1,24 @@
 import Navigo from "navigo";
-import DetailNewsPage from "./pages/detailNews";
+import Dashboard from "./pages/admin/dashboard";
+import AdminNewsPage from "./pages/admin/news";
+import CTDT from "./pages/admin/ctdt";
+// import AboutPage from "./pages/about";
 import HomePage from "./pages/home";
+import NewsPage from "./pages/news";
 
 const router = new Navigo("/", { linksSelector: "a" });
+
 const print = (content) => {
-    document.getElementById("app").innerHTML = content;
+    document.querySelector("#app").innerHTML = content.render();
 };
 
 router.on({
-    "/": () => {
-        print(HomePage.render());
-    },
-    "/tsinh": () => {
-        print("Trang tuyển sinh");
-    },
-    "/ctdt": () => {
-        print("Trương trình đào tạo");
-    },
-    "/goctsinh": () => {
-        print("Góc tuyển sinh");
-    },
-    "/tdung": () => {
-        print("Tuyển dụng");
-    },
-    "/news/:id": (value) => {
-        console.log(value.data.id);
-        print(DetailNewsPage.render(value.data.id));
-    },
+    "/": () => print(HomePage),
+    "/ctdt": () => print(CTDT),
+    "/news": () => print(NewsPage),
+    "/admin/dashboard": () => print(Dashboard),
+    "/admin/news": () => print(AdminNewsPage),
+    "/admin/ctdt": () => print(Dashboard),
+
 });
-
-router.notFound(() => print("Not Found Page"));
-
 router.resolve();
