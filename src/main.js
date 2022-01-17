@@ -3,7 +3,7 @@ import Dashboard from "./pages/admin/dashboard";
 import AdminNewsPage from "./pages/admin/news";
 import CTDT from "./pages/admin/ctdt";
 // import AboutPage from "./pages/about";
-import HomePage from "./pages/home";
+import HomePage from "./pages/Home";
 import NewsPage from "./pages/news";
 
 const router = new Navigo("/", { linksSelector: "a" });
